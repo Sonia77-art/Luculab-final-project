@@ -1,5 +1,6 @@
 import Button from "./Components/Button.jsx";
-
+import Done from "./Components/Done.jsx";
+import Words from "./Components/Words.jsx";
 import "./App.css";
 
 function App() {
@@ -11,11 +12,14 @@ function App() {
           There are scattered different types of Syllables.They hear 2 Words.
           They Should Selecet those syllables that makeup the word
         </p>
-        <ul>
-          <li> son, sang, run, jump, book, flag, gone, slap, hat</li>
-        </ul>
+
+        <Words />
+
         <div>
           <Button text="Play">Play</Button>
+          <br />
+          <br />
+          <Done />
         </div>
       </header>
     </div>
