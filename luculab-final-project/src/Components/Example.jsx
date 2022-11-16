@@ -20,11 +20,11 @@ export default function Example() {
   const words = [
     {
       text: "Son",
-      value: 80,
+      value: 200,
     },
     {
       text: "mistake",
-      value: 50,
+      value: 500,
     },
     {
       text: "jump",
@@ -32,23 +32,23 @@ export default function Example() {
     },
     {
       text: "box",
-      value: 70,
+      value: 1000,
     },
     {
       text: "run",
-      value: 50,
+      value: 450,
     },
     {
       text: "hide",
-      value: 90,
+      value: 800,
     },
     {
       text: "dress",
-      value: 50,
+      value: 330,
     },
     {
       text: "school",
-      value: 50,
+      value: 600,
     },
     {
       text: "game",
@@ -57,7 +57,7 @@ export default function Example() {
   ];
 
   return (
-    <div style={{ height: 400, width: 600 }}>
+    <div style={{ height: 250, width: 500 }}>
       <ReactWordcloud options={options} words={words} />
     </div>
   );
