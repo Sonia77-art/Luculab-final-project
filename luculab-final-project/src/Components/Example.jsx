@@ -3,12 +3,12 @@ import ReactWordcloud from "react-wordcloud";
 
 export default function Example() {
   const options = {
-    colors: ["#FDFF00"],
+    colors: ["blue"],
     enableTooltip: false,
     deterministic: true,
-    fontFamily: "impact",
+    fontFamily: "sans-serif",
     fontSizes: [30, 30],
-    fontStyle: "normal",
+    fontStyle: "italic",
     fontWeight: "normal",
     padding: 1,
     rotations: 0,
