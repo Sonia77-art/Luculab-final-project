@@ -20,8 +20,6 @@ function App() {
         <Words />
         <div>
           <br />
-          <br />
-          <br />
           <Button text="Play">Play</Button>
           <br />
           <br />

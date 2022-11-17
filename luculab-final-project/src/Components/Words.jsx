@@ -1,5 +1,4 @@
 import "../App.css";
-import ReactWordcloud from "react-wordcloud";
 
 export default function Words() {
   const words = [
@@ -25,7 +24,7 @@ export default function Words() {
   return (
     <div className="Wds">
       {words.map((word) => (
-        <button className="btn-2" key={word}>
+        <button onclick="red" className="btn-2" key={word}>
           {word}
         </button>
       ))}
