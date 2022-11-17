@@ -44,6 +44,7 @@
 .btn-2 {
   width: 150px;
   height: 50px;
-  color: gray;
+  color: rgb(15, 14, 14);
   justify-content: space-around;
+  font-size: 15px;
 }

@@ -10,9 +10,7 @@ export default function Example() {
     fontSizes: [30, 30],
     fontStyle: "italic",
     fontWeight: "normal",
-    padding: 1,
     rotations: 0,
-    rotationAngles: [0, 0],
     scale: "sqrt",
     spiral: "rectangular",
     transitionDuration: 1000,
@@ -57,8 +55,10 @@ export default function Example() {
   ];
 
   return (
-    <div style={{ height: 250, width: 500 }}>
-      <ReactWordcloud options={options} words={words} />
-    </div>
+    <>
+      <div style={{ height: 250, width: 500 }}>
+        <ReactWordcloud options={options} words={words} />
+      </div>
+    </>
   );
 }

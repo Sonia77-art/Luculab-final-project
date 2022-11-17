@@ -5,21 +5,21 @@ export default function Words() {
   const words = [
     "son",
 
-    "sang",
-
-    "run",
+    "mistake",
 
     "jump",
 
-    "book",
+    "box",
 
-    "flag",
+    "run",
 
-    "gone",
+    "hide",
 
-    "slap",
+    "dress",
 
-    "hat",
+    "school",
+
+    "game",
   ];
 
   return (
