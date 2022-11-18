@@ -1,11 +1,7 @@
 import "../App.css";
-import { useState } from "react";
 
 export default function Words() {
-  const [isBlue, setIsBlue] = useState("Blue");
-  function handleInformationClick(event) {
-    setIsBlue(!isBlue);
-  }
+  function handleInformationClick(event) {}
   const words = ["son", "box", "hide", "dress", "bed"];
 
   return (
@@ -13,8 +9,8 @@ export default function Words() {
       {words.map((word) => (
         <button
           className="btn-2"
-          onClick={() => handleInformationClick(true)}
-          style={{ Color: "blue" }}
+          onClick={() => handleInformationClick()}
+          style={{ backgroundColor: "#42C2FF" }}
           key={word}
         >
           {word}
