@@ -21,11 +21,11 @@ export default function Example() {
       value: 200,
     },
     {
-      text: "mistake",
-      value: 500,
+      text: "bed",
+      value: 1500,
     },
     {
-      text: "jump",
+      text: " ",
       value: 50,
     },
     {
@@ -33,23 +33,23 @@ export default function Example() {
       value: 1000,
     },
     {
-      text: "run",
+      text: " ",
       value: 450,
     },
     {
       text: "hide",
-      value: 800,
+      value: 1500,
     },
     {
       text: "dress",
-      value: 330,
+      value: 1830,
     },
     {
-      text: "school",
+      text: " ",
       value: 600,
     },
     {
-      text: "game",
+      text: " ",
       value: 110,
     },
   ];
