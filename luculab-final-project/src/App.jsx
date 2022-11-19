@@ -26,6 +26,8 @@ function App() {
           </div>
           <br />
         </border>
+        <br />
+        <br />
       </header>
     </div>
   );
