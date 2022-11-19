@@ -3,7 +3,7 @@ import ReactWordcloud from "react-wordcloud";
 
 export default function Example() {
   const options = {
-    colors: ["#fff"],
+    colors: ["#42c2ff"],
     enableTooltip: false,
     deterministic: true,
     fontFamily: "sans-serif",
