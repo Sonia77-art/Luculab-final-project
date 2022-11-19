@@ -1,9 +1,8 @@
 import Button from "./Components/Button.jsx";
 import Done from "./Components/Done.jsx";
-// import Words from "./Components/Words.jsx";
 import "./App.css";
 import Example from "./Components/Example.jsx";
-import Words from "./Components/Words.jsx";
+import Wordbuttons from "./Components/Wordbuttons.jsx";
 
 function App() {
   return (
@@ -16,8 +15,8 @@ function App() {
         </p>
 
         <Example />
+        <Wordbuttons />
 
-        <Words />
         <div>
           <br />
           <Button text="Play">Play</Button>
