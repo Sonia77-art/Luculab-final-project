@@ -6,4 +6,3 @@ test("renders learn react link", () => {
   const linkElement = screen.getByText(/Excerise-1/i);
   expect(linkElement).toBeInTheDocument();
 });
-n;
