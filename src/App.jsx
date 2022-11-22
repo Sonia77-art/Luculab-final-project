@@ -8,13 +8,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2 classname="heading">Excerise-1</h2>
+        <h2 className="heading">Excerise-1</h2>
         <p>
           There are scattered different types of Syllables.They hear 2 Words.
           They Should Selecet those syllables that makeup the word
         </p>
         <border className="Bro">
-          <Example />
           <Wordbuttons />
 
           <div>
