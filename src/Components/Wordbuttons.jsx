@@ -24,7 +24,7 @@ const Button = (props) => {
 };
 
 export default function Words() {
-  const [words, setWords] = useState(["son", "bed", "box", "hide", "dress"]);
+  const words = ["son", "bed", "box", "hide", "dress"];
 
   return (
     <div className="container">

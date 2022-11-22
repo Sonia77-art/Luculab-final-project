@@ -1,7 +1,7 @@
 import Button from "./Components/Button.jsx";
 import Done from "./Components/Done.jsx";
 import "./App.css";
-import Example from "./Components/Example.jsx";
+
 import Wordbuttons from "./Components/Wordbuttons.jsx";
 
 function App() {
