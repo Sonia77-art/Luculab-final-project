@@ -30,27 +30,10 @@
   justify-content: center;
   align-items: center;
 }
+.selected {
+  color: #42c2ff;
+}
 
-.son {
-  background-color: #42c2ff;
-  color: #fff;
-}
-.bed {
-  background-color: #42c2ff;
-  color: #fff;
-}
-.box {
-  background-color: #42c2ff;
-  color: #fff;
-}
-.hide {
-  background-color: #42c2ff;
-  color: #fff;
-}
-.dress {
-  background-color: #42c2ff;
-  color: #fff;
-}
 .btn {
   background-color: #eee;
   color: rgb(6, 5, 5);

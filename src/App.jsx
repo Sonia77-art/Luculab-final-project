@@ -1,7 +1,4 @@
-import Button from "./Components/Button.jsx";
-import Done from "./Components/Done.jsx";
 import "./App.css";
-
 import Wordbuttons from "./Components/Wordbuttons.jsx";
 
 function App() {
@@ -14,15 +11,10 @@ function App() {
           They Should Selecet those syllables that makeup the word
         </p>
         <border className="Bro">
+          <br />
+          <br />
           <Wordbuttons />
-
-          <div>
-            <br />
-            <Button text="Play">Play</Button>
-            <br />
-            <br />
-            <Done />
-          </div>
+          <br />
           <br />
         </border>
         <br />

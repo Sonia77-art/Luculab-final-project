@@ -1,6 +1,6 @@
 import "../App.css";
 
-export default function Button(props) {
+export default function Done(props) {
   function handleClick(event) {
     console.log("Button was clicked!");
     alert("Go To Next Excercise");

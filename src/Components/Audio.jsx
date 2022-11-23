@@ -1,7 +1,7 @@
 import { useState } from "react";
 import lukulabAudio from "./lukulabAudio.mp4";
 
-export default function Button() {
+export default function Audio() {
   const [isOpen, setIsOpen] = useState(true);
   function handleClick(event) {
     setIsOpen(!isOpen);

@@ -1,36 +1,43 @@
 import { useState } from "react";
 import "../App.css";
+import Done from "../Components/Done.jsx";
+import Audio from "../Components/Audio.jsx";
 
 const Button = (props) => {
   const [color, setColors] = useState("");
   const [active, setActive] = useState(false);
-  const handleClickButton = (Words) => {
+  const handleClickButton = (Word) => {
     setActive(true);
-    setColors(Words);
+    setColors("");
     if (active === true) {
       setActive(false);
-      setColors("");
+      setColors("selected");
     }
   };
-
   return (
-    <button
-      className={`button ${color}`}
-      onClick={() => handleClickButton(props.word)}
-    >
+    <button className={`button ${color}`} onClick={handleClickButton}>
       {props.word}
     </button>
   );
 };
 
 export default function Words() {
-  const words = ["son", "bed", "box", "hide", "dress"];
+  const words = ["shi", "ing", "ed", "ny", "er"];
 
   return (
-    <div className="container">
-      {words.map((words) => (
-        <Button key={words} word={words} />
-      ))}
-    </div>
+    <>
+      <div className="container">
+        {words.map((word) => (
+          <Button key={word} word={word} />
+        ))}
+      </div>
+      <br />
+      <div>
+        <Audio />
+        <br />
+        <br />
+        <Done />
+      </div>
+    </>
   );
 }
