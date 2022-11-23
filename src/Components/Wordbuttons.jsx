@@ -31,11 +31,14 @@ export default function Words() {
           <Button key={word} word={word} />
         ))}
       </div>
+
       <br />
       <div>
         <Audio />
         <br />
-        <br />
+      </div>
+
+      <div>
         <Done />
       </div>
     </>
