@@ -1,5 +1,5 @@
 import { useState } from "react";
-import lukulabAudio from "./lukulabAudio.mp4";
+import LukulabAudio from "../LukulabAudio.MP3";
 
 export default function Audio() {
   const [isOpen, setIsOpen] = useState(true);
@@ -10,7 +10,7 @@ export default function Audio() {
     <div className="Play">
       <button className="Btn" onClick={handleClick}>
         <audio controls>
-          <source src={lukulabAudio} type="audio/mp4" />
+          <source src={LukulabAudio} type="audio/MP3" />
         </audio>
       </button>
     </div>

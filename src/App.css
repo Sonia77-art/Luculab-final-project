@@ -30,8 +30,17 @@
   justify-content: center;
   align-items: center;
 }
-.selected {
+.blue {
   color: #42c2ff;
+}
+.red {
+  color: #983d04;
+}
+.green {
+  color: #42ff65;
+}
+.grey {
+  color: #8f989c;
 }
 
 .button {
@@ -47,4 +56,9 @@
 .Bro {
   border-style: dotted;
   background-color: #f6f8f6;
+}
+
+.btn-3 {
+  background-color: green;
+  color: #fff;
 }
