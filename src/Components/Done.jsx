@@ -6,7 +6,7 @@ export default function Done(props) {
     props.onClick();
   }
   return (
-    <button className="btn-1" onClick={handleClick}>
+    <button className="btn-1" onClick={handleClick} disabled={props.disabled}>
       Done
     </button>
   );

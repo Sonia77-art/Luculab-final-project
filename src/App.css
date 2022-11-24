@@ -24,6 +24,9 @@
   color: white;
   border: none;
 }
+.btn-1:disabled {
+  background-color: grey;
+}
 
 .container {
   display: flex;
@@ -34,13 +37,13 @@
   color: #42c2ff;
 }
 .red {
-  color: #983d04;
+  color: #f70b0b;
 }
 .green {
-  color: #42ff65;
+  color: #25e248;
 }
 .grey {
-  color: #8f989c;
+  color: #36393a;
 }
 
 .button {

@@ -3,6 +3,7 @@ import "../App.css";
 import Done from "../Components/Done.jsx";
 import Audio from "../Components/Audio.jsx";
 import NextButton from "../Components/NextButton.jsx";
+import LukulabAudio from "../LukulabAudio.MP3";
 
 const Button = (props) => {
   const [active, setActive] = useState(false);
@@ -37,24 +38,86 @@ const Button = (props) => {
 export default function Words() {
   const [selectedWords, setSelectedWords] = useState([]);
   const [donePressed, setDonePressed] = useState(false);
+  const [disabled, setDisabled] = useState(true);
   const handleDoneClick = () => {
     setDonePressed(true);
   };
 
-  const words = ["shi", "ing", "ed", "ny", "er"];
-  const correctWords = ["shi", "ny"];
+  const slides = [
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["num", "ber", "dom", "sum", "ral"],
+      correctWords: ["num", "ber"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["spot", "ted", "ly", "un", "ful"],
+      correctWords: ["spot", "ted"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["morn", "ish", "ger", "ing", "est"],
+      correctWords: ["mor", "nig"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+    {
+      words: ["shi", "ing", "ed", "ny", "er"],
+      correctWords: ["shi", "ny"],
+      audio: LukulabAudio,
+    },
+  ];
 
   return (
     <>
       <div className="container">
-        {words.map((word) => {
+        {slides[0].words.map((word) => {
           const handleClick = () => {
+            selectedWords.length > 0 && setDisabled(false);
             setSelectedWords([...selectedWords, word]);
           };
           return (
             <Button
               key={word}
-              correctWords={correctWords}
+              correctWords={slides[0].correctWords}
               word={word}
               showResults={donePressed}
               onClick={handleClick}
@@ -70,7 +133,7 @@ export default function Words() {
       </div>
 
       <div>
-        {selectedWords.length > 1 && <Done onClick={handleDoneClick} />}
+        <Done disabled={disabled} onClick={handleDoneClick} />
       </div>
       <br />
       <br />
