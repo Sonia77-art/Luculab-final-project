@@ -39,8 +39,14 @@ export default function Words() {
   const [selectedWords, setSelectedWords] = useState([]);
   const [donePressed, setDonePressed] = useState(false);
   const [disabled, setDisabled] = useState(true);
+  const [slideNumber, setSlideNumber] = useState(0);
   const handleDoneClick = () => {
     setDonePressed(true);
+  };
+  const handleNextButton = () => {
+    setSlideNumber(slideNumber + 1);
+    setDonePressed(false);
+    setDisabled(true);
   };
 
   const slides = [
@@ -64,52 +70,12 @@ export default function Words() {
       correctWords: ["mor", "nig"],
       audio: LukulabAudio,
     },
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
   ];
 
   return (
     <>
       <div className="container">
-        {slides[0].words.map((word) => {
+        {slides[slideNumber].words.map((word) => {
           const handleClick = () => {
             selectedWords.length > 0 && setDisabled(false);
             setSelectedWords([...selectedWords, word]);
@@ -137,7 +103,9 @@ export default function Words() {
       </div>
       <br />
       <br />
-      <div>{donePressed ? <NextButton /> : null}</div>
+      <div>
+        {donePressed ? <NextButton onClick={handleNextButton} /> : null}
+      </div>
     </>
   );
 }
