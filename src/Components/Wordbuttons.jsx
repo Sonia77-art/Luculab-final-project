@@ -74,9 +74,7 @@ export default function Words() {
       </div>
       <br />
       <br />
-      <div>
-        <NextButton />
-      </div>
+      <div>{donePressed ? <NextButton /> : null}</div>
     </>
   );
 }
