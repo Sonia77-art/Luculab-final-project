@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background-color: #d6f4af;
+  background-color: #8fc9de;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,12 +20,14 @@
 .btn-1 {
   background-color: green;
   width: 120px;
+  border-radius: 8px;
+  font-size: 25px;
   height: 50px;
   color: white;
   border: none;
 }
 .btn-1:disabled {
-  background-color: grey;
+  background-color: rgb(141, 138, 138);
 }
 
 .container {
@@ -35,21 +37,28 @@
 }
 .blue {
   color: #42c2ff;
+  background-color: #d2dadd;
 }
 .red {
   color: #f70b0b;
+  background-color: #f3efef;
 }
 .green {
   color: #25e248;
+  background-color: #e9efea;
 }
 .grey {
   color: #36393a;
+  background-color: #d6dfe3;
 }
 
 .button {
   padding: 10px 25px;
-  border: 1px solid rgb(7, 1, 1);
-  margin: 10px;
+  border: none;
+  margin: 40px;
+  font-size: 35px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .heading {
@@ -57,11 +66,18 @@
 }
 
 .Bro {
-  border-style: dotted;
+  border-style: solid;
   background-color: #f6f8f6;
 }
 
 .btn-3 {
   background-color: green;
   color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 25px;
+  border-radius: 6px;
+  border: none;
 }

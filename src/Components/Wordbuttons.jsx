@@ -61,13 +61,13 @@ export default function Words() {
       audio: LukulabAudio,
     },
     {
-      words: ["spot", "ted", "ly", "un", "ful"],
+      words: ["spot", "un", "ly", "ted", "ful"],
       correctWords: ["spot", "ted"],
       audio: LukulabAudio,
     },
     {
       words: ["morn", "ish", "ger", "ing", "est"],
-      correctWords: ["mor", "nig"],
+      correctWords: ["morn", "ing"],
       audio: LukulabAudio,
     },
   ];
@@ -83,7 +83,7 @@ export default function Words() {
           return (
             <Button
               key={word}
-              correctWords={slides[0].correctWords}
+              correctWords={slides[slideNumber].correctWords}
               word={word}
               showResults={donePressed}
               onClick={handleClick}
