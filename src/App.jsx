@@ -17,6 +17,7 @@ function App() {
         </border>
         <br />
         <br />
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a href="#"> How to do the excerise </a>
         <br />
       </header>
