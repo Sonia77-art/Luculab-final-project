@@ -5,11 +5,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2 className="heading">Excerise-1</h2>
-        <p>
-          There are scattered different types of Syllables.They hear 2 Words.
-          They Should Selecet those syllables that makeup the word
-        </p>
+        <h2 className="heading">Excerise-3</h2>
+
         <border className="Bro">
           <br />
           <br />
@@ -19,6 +16,8 @@ function App() {
           <br />
         </border>
         <br />
+        <br />
+        <a href="#"> How to do the excerise </a>
         <br />
       </header>
     </div>
