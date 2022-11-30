@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
 import Done from "../Components/Done.jsx";
 import Audio from "../Components/Audio.jsx";
 import NextButton from "../Components/NextButton.jsx";
-import LukulabAudio from "../LukulabAudio.MP3";
+// import LukulabAudio from "../LukulabAudio.MP3";
+import { fetchLukulab_Exercise } from "../Fetch_data";
 
 const Button = (props) => {
   const [active, setActive] = useState(false);
@@ -40,6 +41,17 @@ export default function Words() {
   const [donePressed, setDonePressed] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [slideNumber, setSlideNumber] = useState(0);
+  const [pullDatas, setPullDatas] = useState();
+
+  const fetchData = async function () {
+    const data = await fetchLukulab_Exercise();
+    setPullDatas(data);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const handleDoneClick = () => {
     setDonePressed(true);
   };
@@ -49,47 +61,53 @@ export default function Words() {
     setDisabled(true);
   };
 
-  const slides = [
-    {
-      words: ["shi", "ing", "ed", "ny", "er"],
-      correctWords: ["shi", "ny"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["num", "ber", "dom", "sum", "ral"],
-      correctWords: ["num", "ber"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["spot", "un", "ly", "ted", "ful"],
-      correctWords: ["spot", "ted"],
-      audio: LukulabAudio,
-    },
-    {
-      words: ["morn", "ish", "ger", "ing", "est"],
-      correctWords: ["morn", "ing"],
-      audio: LukulabAudio,
-    },
-  ];
-
+  // const slides = [
+  //   {
+  //     words: ["shi", "ing", "ed", "ny", "er"],
+  //     correctWords: ["shi", "ny"],
+  //     audio: LukulabAudio,
+  //   },
+  //   {
+  //     words: ["num", "ber", "dom", "sum", "ral"],
+  //     correctWords: ["num", "ber"],
+  //     audio: LukulabAudio,
+  //   },
+  //   {
+  //     words: ["spot", "un", "ly", "ted", "ful"],
+  //     correctWords: ["spot", "ted"],
+  //     audio: LukulabAudio,
+  //   },
+  //   {
+  //     words: ["morn", "ish", "ger", "ing", "est"],
+  //     correctWords: ["morn", "ing"],
+  //     audio: LukulabAudio,
+  //   },
+  // ];
+  //  const exerciseSet = {
+  //        template && template.data.Lukulab_exercise.filter((test)=> {
+  //         if template.Excerise_Set === 3;
+  //        }
+  //  }
+  console.log(pullDatas);
   return (
     <>
       <div className="container">
-        {slides[slideNumber].words.map((word) => {
-          const handleClick = () => {
-            selectedWords.length > 0 && setDisabled(false);
-            setSelectedWords([...selectedWords, word]);
-          };
-          return (
-            <Button
-              key={word}
-              correctWords={slides[slideNumber].correctWords}
-              word={word}
-              showResults={donePressed}
-              onClick={handleClick}
-            />
-          );
-        })}
+        {pullDatas &&
+          pullDatas.data.Lukulab_Exercise.map((pullData) => {
+            const handleClick = () => {
+              selectedWords.length > 0 && setDisabled(false);
+              setSelectedWords([...selectedWords, pullData.Text]);
+            };
+            return (
+              <Button
+                key={pullData.ID}
+                correctWords={pullData.Correctanswer}
+                word={pullData.Text}
+                showResults={donePressed}
+                onClick={handleClick}
+              />
+            );
+          })}
       </div>
 
       <br />

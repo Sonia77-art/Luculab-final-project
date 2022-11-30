@@ -5,20 +5,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2 className="heading">Excerise-3</h2>
+        <h2 className="heading">Exercise-3</h2>
 
-        <border className="Bro">
+        <div className="border">
           <br />
           <br />
           <Wordbuttons />
           <br />
 
           <br />
-        </border>
+        </div>
         <br />
         <br />
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a href="#"> How to do the excerise </a>
+        <a href="#"> How to do the exercise </a>
         <br />
       </header>
     </div>
