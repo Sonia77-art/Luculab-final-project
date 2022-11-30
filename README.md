@@ -4,7 +4,8 @@
 
 # Deployment Link
 
-Frontend : super-cuchufli-4c840d.netlify.app
+Frontend created by Sonia: https://lukulab-excercise-3.netlify.app
+
 
 # Getting Started with Create React App
 
