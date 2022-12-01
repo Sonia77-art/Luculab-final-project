@@ -61,48 +61,32 @@ export default function Words() {
     setDisabled(true);
   };
 
-  // const slides = [
-  //   {
-  //     words: ["shi", "ing", "ed", "ny", "er"],
-  //     correctWords: ["shi", "ny"],
-  //     audio: LukulabAudio,
-  //   },
-  //   {
-  //     words: ["num", "ber", "dom", "sum", "ral"],
-  //     correctWords: ["num", "ber"],
-  //     audio: LukulabAudio,
-  //   },
-  //   {
-  //     words: ["spot", "un", "ly", "ted", "ful"],
-  //     correctWords: ["spot", "ted"],
-  //     audio: LukulabAudio,
-  //   },
-  //   {
-  //     words: ["morn", "ish", "ger", "ing", "est"],
-  //     correctWords: ["morn", "ing"],
-  //     audio: LukulabAudio,
-  //   },
-  // ];
-  //  const exerciseSet = {
-  // Text && Text.data.Lukulab_Exercise.filter((test)=> {
-  // if Text.Exercise_Set === 3;
-  // })
-  //  }
-  console.log(pullDatas);
+  const exerciseSet =
+    pullDatas &&
+    pullDatas.data.Lukulab_Exercise.filter((exercise) => {
+      if (exercise.Exercise_Set === "3") {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+  console.log(exerciseSet);
+  const exercise = pullDatas && exerciseSet[slideNumber];
   return (
     <>
       <div className="container">
         {pullDatas &&
-          pullDatas.data.Lukulab_Exercise.map((pullDatas) => {
+          exercise.Text.split(", ").map((word) => {
             const handleClick = () => {
               selectedWords.length > 0 && setDisabled(false);
-              setSelectedWords([...selectedWords, pullDatas.Text]);
+              setSelectedWords([...selectedWords, word]);
             };
             return (
               <Button
-                key={pullDatas.ID}
-                correctWords={pullDatas.Correctanswer}
-                word={pullDatas.Text}
+                key={word}
+                correctWords={exercise.Correctanswer.split(", ")}
+                word={word}
                 showResults={donePressed}
                 onClick={handleClick}
               />
@@ -112,7 +96,7 @@ export default function Words() {
 
       <br />
       <div>
-        <Audio />
+        {pullDatas && <Audio fileName={exercise.Audio} />}
         <br />
       </div>
 
