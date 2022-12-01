@@ -84,25 +84,25 @@ export default function Words() {
   //   },
   // ];
   //  const exerciseSet = {
-  //        template && template.data.Lukulab_exercise.filter((test)=> {
-  //         if template.Excerise_Set === 3;
-  //        }
+  // Text && Text.data.Lukulab_Exercise.filter((test)=> {
+  // if Text.Exercise_Set === 3;
+  // })
   //  }
   console.log(pullDatas);
   return (
     <>
       <div className="container">
         {pullDatas &&
-          pullDatas.data.Lukulab_Exercise.map((pullData) => {
+          pullDatas.data.Lukulab_Exercise.map((pullDatas) => {
             const handleClick = () => {
               selectedWords.length > 0 && setDisabled(false);
-              setSelectedWords([...selectedWords, pullData.Text]);
+              setSelectedWords([...selectedWords, pullDatas.Text]);
             };
             return (
               <Button
-                key={pullData.ID}
-                correctWords={pullData.Correctanswer}
-                word={pullData.Text}
+                key={pullDatas.ID}
+                correctWords={pullDatas.Correctanswer}
+                word={pullDatas.Text}
                 showResults={donePressed}
                 onClick={handleClick}
               />
