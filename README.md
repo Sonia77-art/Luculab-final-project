@@ -4,9 +4,7 @@
 
 # Deployment Link
 
-Frontend created by Sonia: https://lukulab-excercise-3.netlify.app
-
-
+Frontend created by Sonia: https://lukulab-exercise-3.netlify.app
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
