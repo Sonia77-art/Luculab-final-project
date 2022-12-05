@@ -96,7 +96,7 @@ export default function Words() {
 
       <br />
       <div>
-        {pullDatas && <Audio fileName={exercise.Audio} />}
+        {pullDatas && <Audio key={exercise.ID} exercise={exercise} />}
         <br />
       </div>
 
