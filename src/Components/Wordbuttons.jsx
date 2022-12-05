@@ -3,7 +3,6 @@ import "../App.css";
 import Done from "../Components/Done.jsx";
 import Audio from "../Components/Audio.jsx";
 import NextButton from "../Components/NextButton.jsx";
-// import LukulabAudio from "../LukulabAudio.MP3";
 import { fetchLukulab_Exercise } from "../Fetch_data";
 
 const Button = (props) => {
